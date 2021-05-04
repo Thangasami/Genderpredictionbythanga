@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> GENDER PREDICTION </title>
+</head>
+<body style="background-color:yellow;">
+ <div class = "login">
+ <h1 style="color:navy;"> Gender Prediction </h1>
+ <p>
+  <h3> In Nature, There is
+considerable variation in the BMI amongst men and women.
+</h3><h3>
+There were a higher proportion of women with high BMI as
+compared to men. </h3><h3>
+Based on given height and weight, we can somehow predict the gender of the person. 
+</h3><h3> Most of the cases, it will work. Ofcourse, there may be some exceptions.</h3><h3></p>
+ This page will try to predict gender based on given height and weight as much as possible </h3>
+ <form action="{{ url_for('predict') }}" method="POST">
+ <p>
+     <input type="text" name="Height" placeholder="Height in cm" required="required" />
+     </p><p>
+     <input type="text" name="Weight" placeholder="Weight in Kg" required="required" />
+     </p><p>
+     <button type="submit" class="btn btn-primary btn-block btn-large">Predict Gender</button>
+     </p> 
+ </form>
+    <br>
+    </br>
+   <h3 style="color:red;"> {{ prediction_text }} </h3>
+  </div>   
+</body>
+</html>
